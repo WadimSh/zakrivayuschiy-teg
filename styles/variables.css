@@ -1,1 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --themes-main-color: #000;
+  --themes-background-color: #fff;
+  --main-font-family: Inter;
+  --accent-font-family: 'PressStart2P';
+  --main-font-size: 18px;
+  --accent-font-size: 14px;
+  --body-pattern: url('../svg/pattern-light.svg');
+}
