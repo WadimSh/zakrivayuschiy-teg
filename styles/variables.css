@@ -13,3 +13,9 @@
   --section-size: clamp(23.19rem, calc(15.95rem + 30.89vw), 43.75rem);
   --body-pattern: url('../svg/pattern-light.svg');
 }
+
+@media (width <= 375px) {
+  :root {
+    --section-size: 100%;
+  }
+}

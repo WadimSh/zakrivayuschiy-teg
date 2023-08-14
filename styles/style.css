@@ -28,13 +28,14 @@
 }
 
 .header {
+  --title-padding-top: clamp(7.50rem, calc(7.15rem + 1.50vw), 8.50rem);
   font-family: var(--accent-font-family), fantasy;
   display: flex;
   flex-direction: column;
   align-items: center;
   inline-size: var(--section-size, 50%);
   margin: auto;
-  padding: 135px 0 25px;
+  padding: var(--title-padding-top) 0 25px;
   border: 2px solid currentColor;
   background: var(--themes-background-color);
   margin-bottom: 100px;
