@@ -7,12 +7,16 @@
 .theme-dark {
   --themes-main-color: #00cc14;
   --themes-background-color: #000;
+  --card-font-weight: 465;
+  --title-font-weight: 785;
   --body-pattern: url('../svg/pattern-dark.svg');
 }
 
 .theme-light {
   --themes-main-color: #000;
   --themes-background-color: #fff;
+  --card-font-weight: 400;
+  --title-font-weight: 700;
   --body-pattern: url('../svg/pattern-light.svg');
 }
 
@@ -20,6 +24,8 @@
   :root {
     --themes-main-color: #00cc14;
     --themes-background-color: #000;
+    --card-font-weight: 465;
+    --title-font-weight: 785;
     --body-pattern: url('../svg/pattern-dark.svg');
   }
 }

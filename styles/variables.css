@@ -4,7 +4,12 @@
   --themes-background-color: #fff;
   --main-font-family: Inter;
   --accent-font-family: 'PressStart2P';
+  --card-font-weight: 400;
+  --title-font-weight: 700;
+  --logo-font-size: clamp(3.06rem, calc(2.71rem + 1.50vw), 4.06rem);
+  --title-font-size: clamp(0.88rem, calc(0.68rem + 0.85vw), 1.44rem);
   --main-font-size: 18px;
   --accent-font-size: 14px;
+  --section-size: clamp(23.19rem, calc(15.95rem + 30.89vw), 43.75rem);
   --body-pattern: url('../svg/pattern-light.svg');
 }
