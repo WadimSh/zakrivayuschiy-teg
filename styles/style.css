@@ -17,4 +17,233 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font-family), sans-serif;
+  font-variation-settings: 'wght' var(--card-font-weight, 400);
+  color: var(--themes-main-color);
+  background-color: var(--themes-background-color);
+  background-image: var(--body-pattern);
+  background-size: 4px;
+  background-attachment: fixed;
+  padding: 100px 0;
+}
+
+.page__section {
+  inline-size: var(--section-size, 50%);
+  margin: auto;
+}
+
+.header {
+  --title-padding-top: clamp(7.50rem, calc(7.15rem + 1.50vw), 8.50rem);
+  font-family: var(--accent-font-family), fantasy;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--title-padding-top) 0 25px;
+  border: 2px solid currentColor;
+  background: var(--themes-background-color);
+  margin-bottom: 100px;
+}
+
+.header__logo {
+  text-align: center;
+  font-size: var(--logo-font-size);
+  margin-bottom: 20px;
+}
+
+.header__title {
+  text-transform: uppercase;
+  font-size: var(--title-font-size);
+  margin-bottom: 25px;
+}
+
+.theme-menu {
+  transform: translateX(10px);
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: var(--accent-font-size);
+  gap: 14px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: opacity .3s ease;
+  cursor: pointer;
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  inset-block-end: -2px;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 2px;
+  background-color: var(--themes-main-color);
+  transform-origin: left center;
+  scale: 0;
+  transition: scale .3s ease;
+}
+
+.theme-menu__button:hover {
+  opacity: .6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: .6;
+}
+
+.theme-menu__button:focus-visible::after {
+  scale: 1;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+  opacity: .6;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  inset: 50% auto auto 0;
+  animation: movement .5s infinite alternate ease-in-out;
+}
+
+.card {
+  border: 2px solid currentColor;
+  background-color: var(--themes-background-color);
+}
+
+.card__title {
+  border-block-end: 2px solid currentColor;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--title-font-weight, 700);
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+}
+
+.card__text-box {
+  border-block-start: 2px solid currentColor;
+  padding: 25px;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+.card__text:not(:last-child) {
+  margin-bottom: 27px;
+}
+
+.card__button-block {
+  padding: 0 25px 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.card__icon-button {
+  max-block-size: 38px;
+  border: 2px solid transparent;
+  padding: 0;
+  background-color: transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--themes-background-color);
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+}
+
+.button_type_floppy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 50px auto 0;
+  padding: 15px 20px;
+}
+
+.button_type_floppy svg {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  fill: var(--themes-main-color)
+}
+
+@media (width <= 375px) {
+  .button_type_floppy {
+    flex-direction: column;
+  }
+  
+  .button_type_floppy svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.button {
+  position: relative;
+  border: 2px solid var(--themes-main-color);
+  padding: 10px 17px;
+  overflow: hidden;
+  color: var(--themes-main-color);
+  font-family: var(--accent-font-family), fantasy;
+  font-size: var(--accent-font-size);
+  background-color: var(--themes-background-color);
+  transition: color 1s ease, box-shadow .3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--themes-background-color);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--themes-main-color);
+  transition: translate .5s ease-in-out;
+  translate: -100%;
+}
+
+.button:hover::before {
+  translate: 0%;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 currentColor;
+}
+
+.button__text {
+  position: relative;
 }
