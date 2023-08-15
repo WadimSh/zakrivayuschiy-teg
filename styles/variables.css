@@ -2,6 +2,7 @@
 :root {
   --themes-main-color: #000;
   --themes-background-color: #fff;
+  --accent-fill-color: #ff0000;
   --main-font-family: Inter;
   --accent-font-family: 'PressStart2P';
   --card-font-weight: 400;
